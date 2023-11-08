@@ -1,8 +1,8 @@
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = format("tf-state-workshop-%s", local.account_id)
+  bucket = format("terraform-eks-state-%s", local.account_id)
 
   tags = {
-    Name = format("tf-state-workshop-%s", local.account_id)
+    Name = format("terraform-eks-state-%s", local.account_id)
   }
   lifecycle {
     ignore_changes = [bucket]
